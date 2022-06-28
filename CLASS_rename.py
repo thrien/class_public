@@ -43,7 +43,7 @@ newstructure_shortname= ["th","pt","fo","tr","hr"]
 # > grep "\&nl" */*.c */*.h */*.py */*.pyx */*.pxd */*.ipynb */*.ini *.ini
 #
 # and check whether some of the lines feature an nl that has nothing
-# to do with the stucture short name. If yes, write the exception in
+# to do with the structure short name. If yes, write the exception in
 # the dictionary below.
 
 exceptions = {"th":[],
@@ -196,7 +196,7 @@ elif parse_dict.method == "clean":
       print ("IN "+fname+", DELETED .unchanged AND .old FILES")
 
     try:
-      # remove log files Makefile.old and possibly autostep.py
+      # remove log files Makefile.old and possibly autosetup.py
       os.remove("Makefile.old")
       if parse_dict.verbose > 0:
         print ("REMOVED Makefile.old")
@@ -277,7 +277,7 @@ elif parse_dict.method == "rename":
       for filename in filelist:
         # open input file (with old names)
         with open(os.path.join(fldername,filename),"r") as inf:
-          # open temporary output file (where we will subsititue the new names)
+          # open temporary output file (where we will substitute the new names)
           with open(os.path.join(fldername,filename+".tmp"),"w") as outf:
             # open a log file with extension .unchanged where we will store lines that were not changed but should have, potentially (for visual inspection)
             with open(os.path.join(fldername,filename+".unchanged"),"a") as unchf:
@@ -289,10 +289,10 @@ elif parse_dict.method == "rename":
                 if "struct "+xsl in line:
                   if "struct "+xsl+" "+xss in line:
                     # replace each structure declaration (e.g. 'struct nonlinear nl' -> 'struct fourier fo')
-                    # we isolate this case because it is very useful to catch many occurences of the structure short name (e.g. 'nl') already here
+                    # we isolate this case because it is very useful to catch many occurrences of the structure short name (e.g. 'nl') already here
                     line = line.replace("struct "+xsl+" "+xss,"struct "+ysl+" "+yss)
                   else:
-                    # replace other occurences (e.g. 'struct nonlinear' -> 'struct fourier')
+                    # replace other occurrences (e.g. 'struct nonlinear' -> 'struct fourier')
                     # Special care is needed here! Check that the next character is not a letter
                     # Thus we only allow for a small selection of relevant possibilities
                     for char in ['\t','\n',' ','*','`',';',':']:
@@ -300,10 +300,10 @@ elif parse_dict.method == "rename":
                 if "cdef "+xsl in line:
                   if "cdef "+xsl+" "+xss in line:
                     # replace each structure declaration (e.g. 'cdef nonlinear nl' -> 'cdef fourier fo')
-                    # we isolate this case because it is very useful to catch many occurences of the structure short name (e.g. 'nl') already here
+                    # we isolate this case because it is very useful to catch many occurrences of the structure short name (e.g. 'nl') already here
                     line = line.replace("cdef "+xsl+" "+xss,"cdef "+ysl+" "+yss)
                   else:
-                    # replace other occurences (e.g. 'cdef nonlinear' -> 'cdef fourier')
+                    # replace other occurrences (e.g. 'cdef nonlinear' -> 'cdef fourier')
                     line = line.replace("cdef "+xsl,"cdef "+ysl)
                 if xsl+" structure" in line:
                   line = line.replace(xsl+" structure",ysl+" structure")
@@ -367,7 +367,7 @@ elif parse_dict.method == "rename":
 
                   # if the line did contain the short name in another circumstances, print it in the log file .unchanged
                   if xss in line:
-                    # Mark the occurence of the short name by arrows (e.g. 'only' -> 'o-->nl<--y')
+                    # Mark the occurrence of the short name by arrows (e.g. 'only' -> 'o-->nl<--y')
                     unchf.write(line.replace(xss,"-->"+xss+"<--"))
 
                 # write the line (changed or not) in the temporary output file
@@ -424,6 +424,6 @@ elif parse_dict.method == "rename":
     # done for this particular module
     first_loop = False
 
-# end of loop over modulea
+# end of loop over modules
 if parse_dict.verbose>0:
   print("SUCCESS!")

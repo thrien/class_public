@@ -54,7 +54,7 @@ from matplotlib.ticker import FixedLocator
 def CPU_parser():
     parser = argparse.ArgumentParser(
         description=(
-            'CPU, a CLASS Plotting Utility, specify wether you want\n'
+            'CPU, a CLASS Plotting Utility, specify whether you want\n'
             'to superimpose, or plot the ratio of different files.'),
         epilog=(
             'A standard usage would be, for instance:\n'
@@ -94,7 +94,7 @@ def plot_CLASS_output(files, x_axis, y_axis, ratio=False, printing='',
                       scale='lin', xlim=[], ylim=[]):
     """
     Load the data to numpy arrays, write all the commands for plotting to a
-    Python script for further refinment, and display them.
+    Python script for further refinement, and display them.
 
     Inspired heavily by the matlab version by Thomas Tram
 

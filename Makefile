@@ -14,7 +14,7 @@ vpath %.o build
 vpath .base build
 
 ########################################################
-###### LINES TO ADAPT TO YOUR PLATEFORM ################
+###### LINES TO ADAPT TO YOUR PLATFORM #################
 ########################################################
 
 # your C compiler:
