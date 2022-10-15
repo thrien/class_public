@@ -397,7 +397,7 @@ struct perturbations
                               [index_ic * ppt->tp_size[index_md] + index_tp]
                               [index_tau * ppt->k_size + index_k]
                               Note that this is not a replication of part of the sources table,
-                              it is just poiting towards the same memory zone, at the place where the late_sources actually start */
+                              it is just pointing towards the same memory zone, at the place where the late_sources actually start */
 
   double *** ddlate_sources; /**< Pointer towards the splined source interpolation table with second derivatives with respect to time
                                 ddlate_sources[index_md]
@@ -497,7 +497,7 @@ struct perturbations_vector
   int l_max_dr;          /**< max momentum in Boltzmann hierarchy for dr) */
   int index_pt_psi0_ncdm1; /**< first multipole of perturbation of first ncdm species, Psi_0 */
   int N_ncdm;		/**< number of distinct non-cold-dark-matter (ncdm) species */
-  int* l_max_ncdm;	/**< mutipole l at which Boltzmann hierarchy is truncated (for each ncdm species) */
+  int* l_max_ncdm;	/**< multipole l at which Boltzmann hierarchy is truncated (for each ncdm species) */
   int* q_size_ncdm;	/**< number of discrete momenta (for each ncdm species) */
 
   int index_pt_eta;       /**< synchronous gauge metric perturbation eta*/
@@ -575,7 +575,7 @@ struct perturbations_workspace
 
   double tca_shear_g;  /**< photon shear in tight-coupling approximation */
   double tca_slip;     /**< photon-baryon slip in tight-coupling approximation */
-  double tca_shear_idm_dr; /**< interacting dark radiation shear in tight coupling appproximation */
+  double tca_shear_idm_dr; /**< interacting dark radiation shear in tight coupling approximation */
   double rsa_delta_g;  /**< photon density in radiation streaming approximation */
   double rsa_theta_g;  /**< photon velocity in radiation streaming approximation */
   double rsa_delta_ur; /**< photon density in radiation streaming approximation */

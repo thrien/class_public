@@ -94,7 +94,7 @@ class_precision_parameter(tol_shooting_deltax_rel,double,1.e-5)
 class_precision_parameter(tol_fraction_accuracy,double,1.e-10)
 /**
  * Threshold value of M_ncdm=T_ncdm/m_ncdm above wich a species is
- * considered a "non-free-streaming" when comuting the parameter
+ * considered a "non-free-streaming" when computing the parameter
  * Omega0_nfsm, relevant for HyRec and non-linear correction
  * algorithms
  */
@@ -129,11 +129,11 @@ class_precision_parameter(thermo_z_initial_if_idm,double,1.e9)
  */
 class_precision_parameter(thermo_z_linear,double,1.e4)
 /**
- * Number of recfast integration steps (linear sampling, intermdiate times between z_linear and reionization)
+ * Number of recfast integration steps (linear sampling, intermediate times between z_linear and reionization)
  */
 class_precision_parameter(thermo_Nz_lin,int,20000)
 /**
- * Number of recfast integration steps (logarithmnic sampling. early times between z-initial and z_linear)
+ * Number of recfast integration steps (logarithmic sampling. early times between z-initial and z_linear)
  */
 class_precision_parameter(thermo_Nz_log,int,5000)
 /**
@@ -180,9 +180,9 @@ class_precision_parameter(z_wkb_acc_diss,double,1.e6) /**< Redshift of the WKB a
  */
 
 class_precision_parameter(recfast_Heswitch,int,6)       /**< from recfast 1.4, specifies how accurate the Helium recombination should be handled */
-class_precision_parameter(recfast_fudge_He,double,0.86) /**< from recfast 1.4, fugde factor for Peeble's equation coefficient of Helium */
+class_precision_parameter(recfast_fudge_He,double,0.86) /**< from recfast 1.4, fudge factor for Peeble's equation coefficient of Helium */
 class_precision_parameter(recfast_Hswitch,int,_TRUE_)   /**< from recfast 1.5, specifies how accurate the Hydrogen recombination should be handled */
-class_precision_parameter(recfast_fudge_H,double,1.14)  /**< from recfast 1.4, fudge factor for Peeble's equation coeffient of Hydrogen */
+class_precision_parameter(recfast_fudge_H,double,1.14)  /**< from recfast 1.4, fudge factor for Peeble's equation coefficient of Hydrogen */
 class_precision_parameter(recfast_delta_fudge_H,double,-0.015) /**< from recfast 1.5.2, increasing Hydrogen fudge factor if Hswitch is enabled */
 class_precision_parameter(recfast_AGauss1,double,-0.14) /**< from recfast 1.5, Gaussian Peeble prefactor fit, amplitude */
 class_precision_parameter(recfast_AGauss2,double,0.079) /**< from recfast 1.5.2, Gaussian Peeble prefactor fit, amplitude */
@@ -201,7 +201,7 @@ class_precision_parameter(recfast_delta_z_He_3,double,50.0) /**< Smoothing facto
 class_precision_parameter(recfast_z_early_H_recombination,double,2870.) /**< from class 3.0, redshift at beginning of early H-recombination (analytic approximation possible), replaces condition  */
 class_precision_parameter(recfast_delta_z_early_H_recombination,double,50.) /**< from class 3.0, smoothing radius delta z for beginning of early H-recombination period  */
 
-class_precision_parameter(recfast_z_full_H_recombination,double,1600.)  /**< from class 3.0, redshift at beignning of full H recombination (always use full equations), replaces condition x_H <  recfast_x_H0_trigger */
+class_precision_parameter(recfast_z_full_H_recombination,double,1600.)  /**< from class 3.0, redshift at beginning of full H recombination (always use full equations), replaces condition x_H <  recfast_x_H0_trigger */
 class_precision_parameter(recfast_delta_z_full_H_recombination,double,50.)  /**< from class 3.0, smoothing radius delta z for full H-recombination period  */
 
 class_precision_parameter(recfast_delta_z_reio,double,2.)  /**< from class 3.0, smoothing radius delta z for reionization period  */
@@ -215,7 +215,7 @@ class_precision_parameter(recfast_x_H0_trigger_delta,double,0.05)  /**< Smoothin
 
 //class_precision_parameter(recfast_H_frac,double,1.0e-3)  /**< from recfast 1.4, specifies the time at which the temperature evolution is calculated by the more precise equation, not used currently */
 /**
- * This is an important flag for energy injections! It also modifies wether recfast will switch approximation schemes or not.
+ * This is an important flag for energy injections! It also modifies whether recfast will switch approximation schemes or not.
  */
 class_precision_parameter(recfast_z_switch_late,double,800.)
 
@@ -332,7 +332,7 @@ class_precision_parameter(perturbations_sampling_stepsize,double,0.1)
 class_precision_parameter(tol_perturbations_integration,double,1.0e-5)
 /**
  * cutoff relevant for controlling stiffness in the PPF scheme. It is
- * neccessary for the Runge-Kutta evolver, but not for ndf15. However,
+ * necessary for the Runge-Kutta evolver, but not for ndf15. However,
  * the approximation is excellent for a cutoff value of 1000, so we
  * leave it on for both evolvers. (CAMB uses a cutoff value of 30.)
  */
@@ -498,7 +498,7 @@ class_precision_parameter(selection_tophat_edge,double,0.1) /**< controls how sm
  * Fourier module precision parameters
  * */
 
-class_precision_parameter(sigma_k_per_decade,double,80.) /**< logarithmic stepsize controlling the precision of integrals for sigma(R,k) and similar quantitites */
+class_precision_parameter(sigma_k_per_decade,double,80.) /**< logarithmic stepsize controlling the precision of integrals for sigma(R,k) and similar quantities */
 
 class_precision_parameter(nonlinear_min_k_max,double,5.0) /**< when
                                using an algorithm to compute nonlinear
@@ -517,7 +517,7 @@ class_precision_parameter(k_max_for_pk_sigma8_max,double,100.) /**< maximal k_ma
 
 class_precision_parameter(halofit_min_k_nonlinear,double,1.0e-4)/**< value of k in 1/Mpc below which non-linear corrections will be neglected */
 
-class_precision_parameter(halofit_k_per_decade,double,80.0) /**< halofit needs to evalute integrals
+class_precision_parameter(halofit_k_per_decade,double,80.0) /**< halofit needs to evaluate integrals
                                (linear power spectrum times some
                                kernels). They are sampled using
                                this logarithmic step size. */
@@ -532,7 +532,7 @@ class_precision_parameter(halofit_sigma_precision,double,0.05) /**< a smaller va
 
 class_precision_parameter(halofit_tol_sigma,double,1.0e-6) /**< tolerance required on sigma(R) when
                                matching the condition sigma(R_nl)=1,
-                               whcih defines the wavenumber of
+                               which defines the wavenumber of
                                non-linearity, k_nl=1./R_nl */
 
 class_precision_parameter(pk_eq_z_max,double,5.0)  /**< Maximum z for the pk_eq method */

@@ -37,7 +37,7 @@ enum interpolation_method {inter_normal, inter_closeby};
  * background structure containing all the background information that
  * other modules need to know.
  *
- * Once initialized by the backgound_init(), contains all necessary
+ * Once initialized by the background_init(), contains all necessary
  * information on the background evolution (except thermodynamics),
  * and in particular, a table of all background quantities as a
  * function of time and scale factor, used for interpolation in other
@@ -627,8 +627,8 @@ extern "C" {
 #define _PSD_DERIVATIVE_EXP_MIN_ -30 /**< for ncdm, for accurate computation of dlnf0/dlnq, q step is varied in range specified by these parameters */
 #define _PSD_DERIVATIVE_EXP_MAX_ 2  /**< for ncdm, for accurate computation of dlnf0/dlnq, q step is varied in range specified by these parameters */
 
-#define _zeta3_ 1.2020569031595942853997381615114499907649862923404988817922 /**< for quandrature test function */
-#define _zeta5_ 1.0369277551433699263313654864570341680570809195019128119741 /**< for quandrature test function */
+#define _zeta3_ 1.2020569031595942853997381615114499907649862923404988817922 /**< for quadrature test function */
+#define _zeta5_ 1.0369277551433699263313654864570341680570809195019128119741 /**< for quadrature test function */
 
 //@}
 

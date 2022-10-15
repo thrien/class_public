@@ -22,12 +22,12 @@ typedef char DetectorFileName[_FILENAMESIZE_+_MAX_DETECTOR_NAME_LENGTH_+256];
 enum br_approx {bra_sharp_sharp,bra_sharp_soft,bra_soft_soft,bra_soft_soft_cons,bra_exact};
 
 /** List of possible schemes to compute relativistic contribution from
-    reionization and structure formatio */
+    reionization and structure formation */
 
 enum reio_approx {sd_reio_Nozawa, sd_reio_Chluba};
 
 /**
- * distorsions structure, containing all the distortion-related parameters and
+ * distortions structure, containing all the distortion-related parameters and
  * evolution that other modules need to know.
  */
 
@@ -70,19 +70,19 @@ struct distortions
 
   double z_min;                              /**< Minimum redshift */
   double z_max;                              /**< Maximum redshift */
-  int z_size;                                /**< Lenght of redshift array */
+  int z_size;                                /**< Length of redshift array */
   double z_delta;                            /**< Redshift intervals */
   double * z;                                /**< Redshift list z[index_z] = list of values */
 
   double * z_weights;                        /**< Weights for integration over z */
 
   /* Can be specified if no noisefile */
-  double x_min;                              /**< Minimum dimentionless frequency */
-  double x_max;                              /**< Maximum dimentionless frequency */
-  double x_delta;                            /**< dimentionless frequency intervals */
+  double x_min;                              /**< Minimum dimensionless frequency */
+  double x_max;                              /**< Maximum dimensionless frequency */
+  double x_delta;                            /**< dimensionless frequency intervals */
 
   /* Will always be specified */
-  int x_size;                                /**< Lenght of dimentionless frequency array */
+  int x_size;                                /**< Length of dimensionless frequency array */
   double * x;                                /**< Dimensionless frequency x[index_x] = list of values */
   double * x_weights;                        /**< Weights for integration over x */
 
@@ -96,11 +96,11 @@ struct distortions
   DetectorFileName sd_detector_list_file;               /**< Full path of detector list file */
 
 
-  /* Tables storing branching ratios, distortions amplitudes and spectral distoritons for all types of distortios */
+  /* Tables storing branching ratios, distortions amplitudes and spectral distortions for all types of distortions */
   double ** br_table;              /**< Branching ratios br_table[index_type][index_z] */
   double * sd_parameter_table;     /**< Spectral Distortion parameters (g,mu,y,r) sd_parameter_table[index_type] */
   double ** sd_shape_table;        /**< Spectral Distortion shapes (G,M,Y,R) sd_shape_table[index_type][index_x] */
-  double ** sd_table;              /**< Spectral Distortion Intensities (final deltaI seperated by component) sd_table[index_type][index_x] */
+  double ** sd_table;              /**< Spectral Distortion Intensities (final deltaI separated by component) sd_table[index_type][index_x] */
 
   /* indices for the type of distortion */
   int index_type_g;                /**< temperature shift/g type distortion */
@@ -137,7 +137,7 @@ struct distortions
   int E_vec_size;                            /**< number of PCA component E branching ratios */
 
   /* Variable to read, allocate and interpolate external file PCA_distortions_schape.dat */
-  double * PCA_nu;                           /**< Frquency array for reading from file PCA_nu[index_nu] */
+  double * PCA_nu;                           /**< Frequency array for reading from file PCA_nu[index_nu] */
   int PCA_Nnu;                               /**< Number of frequency values for reading from file */
 
   double * PCA_G_T;                          /**< temperature shift/g distortion shape PCA_G_T[index_nu] */

@@ -45,13 +45,13 @@ struct output {
 
   enum file_format output_format; /**< which format for output files (definitions, order of columns, etc.) */
 
-  short write_background; /**< flag for outputing background evolution in file */
-  short write_thermodynamics; /**< flag for outputing thermodynamical evolution in file */
-  short write_perturbations; /**< flag for outputing perturbations of selected wavenumber(s) in file(s) */
-  short write_primordial; /**< flag for outputing scalar/tensor primordial spectra in files */
-  short write_exotic_injection; /**< flag for outputing exotic energy injection/deposition in files */
-  short write_noninjection; /**< flag for outputing non-injected contributions in files */
-  short write_distortions; /**< flag for outputing spectral distortions in files */
+  short write_background; /**< flag for outputting background evolution in file */
+  short write_thermodynamics; /**< flag for outputting thermodynamical evolution in file */
+  short write_perturbations; /**< flag for outputting perturbations of selected wavenumber(s) in file(s) */
+  short write_primordial; /**< flag for outputting scalar/tensor primordial spectra in files */
+  short write_exotic_injection; /**< flag for outputting exotic energy injection/deposition in files */
+  short write_noninjection; /**< flag for outputting non-injected contributions in files */
+  short write_distortions; /**< flag for outputting spectral distortions in files */
 
   //@}
 

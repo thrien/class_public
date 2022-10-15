@@ -76,7 +76,7 @@ struct fourier {
   int index_pk_m;  /**< index of pk for matter (defined only when has_pk_m is TRUE) */
   int index_pk_cb; /**< index of pk for cold dark matter plus baryons (defined only when has_pk_cb is TRUE */
 
-  /* and two redundent but useful indices: */
+  /* and two redundant but useful indices: */
 
   int index_pk_total;      /**< always equal to index_pk_m
                               (always defined, useful e.g. for weak lensing spectrum) */
@@ -180,7 +180,7 @@ struct fourier {
   int pk_eq_tau_size;               /**< number of times (and raws in table pk_eq_w_and_Omega) */
 
   double * pk_eq_tau;               /**< table of time values */
-  double * pk_eq_w_and_Omega;       /**< table of background quantites */
+  double * pk_eq_w_and_Omega;       /**< table of background quantities */
   double * pk_eq_ddw_and_ddOmega;   /**< table of second derivatives */
 
   //@}
@@ -203,7 +203,7 @@ struct fourier {
 
 struct fourier_workspace {
 
-  /** @name - quantitites used by HMcode */
+  /** @name - quantities used by HMcode */
 
   //@{
 

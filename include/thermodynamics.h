@@ -26,7 +26,7 @@ enum recombination_algorithm {
 enum reionization_parametrization {
                                    reio_none,       /**< no reionization */
                                    reio_camb,       /**< reionization parameterized like in CAMB */
-                                   reio_bins_tanh,  /**< binned reionization history with tanh inteprolation between bins */
+                                   reio_bins_tanh,  /**< binned reionization history with tanh interpolation between bins */
                                    reio_half_tanh,  /**< half a tanh, instead of the full tanh */
                                    reio_many_tanh,  /**< similar to reio_camb but with more than one tanh */
                                    reio_inter       /**< linear interpolation between specified points */
@@ -135,7 +135,7 @@ struct thermodynamics
                                  thermodynamics variables that are
                                  relevant for the calculation of CMB
                                  anisotropies (and spectral
-                                 distorsions if requested). */
+                                 distortions if requested). */
 
   struct injection in; /**< structure to store exotic energy injections and their energy deposition */
 
@@ -150,7 +150,7 @@ struct thermodynamics
                                     m_cdm)(z) will be a parabola in
                                     log-log scale between zmin and
                                     zmax, with a curvature given by
-                                    annihlation_variation (must be
+                                    annihilation_variation (must be
                                     negative), and with a maximum in
                                     zmax; it will be constant outside
                                     this range */
@@ -252,7 +252,7 @@ struct thermodynamics
   double rd_rec;  /**< comoving photon damping scale at recombination */
 
   double z_star;  /**< redshift at which photon optical depth crosses one */
-  double tau_star;/**< confirmal time at which photon optical depth crosses one */
+  double tau_star;/**< conformal time at which photon optical depth crosses one */
   double rs_star; /**< comoving sound horizon at z_star */
   double ds_star; /**< physical sound horizon at z_star */
   double ra_star;  /**< conformal angular diameter distance to z_star */
@@ -441,7 +441,7 @@ struct thermo_reionization_parameters{
 };
 
 /**
- * General parameters relevant to thermal history and pointers to few other more specialised worspaces
+ * General parameters relevant to thermal history and pointers to few other more specialised workspaces
  */
 
 struct thermo_workspace {
